@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import TestModel
+from home.models import YearsOfExperience
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -76,8 +76,8 @@ class PasswordSerializer(PasswordResetSerializer):
     """Custom serializer for rest_auth to solve reset password error"""
     password_reset_form_class = ResetPasswordForm
 
-class TestModelSerializer(serializers.ModelSerializer):
+class YearsOfExperienceSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = TestModel
+        model = YearsOfExperience
         fields = "__all__"
